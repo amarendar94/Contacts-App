@@ -1,0 +1,16 @@
+<div>
+  <p>Contacts List:</p>
+
+  <ul>
+    <li *ngFor="let contact of contacts" (click)="onSelect(contact)">
+      <label for="firstName">firstName: </label> {{ contact.firstName }}
+      <label for="phoneNumber">Home Phone: </label> {{ contact.phoneNumber }}
+      <button class="btn btn-danger btn-sm mr-3" (click)="delete(contact)">
+        Delete
+      </button>
+      <button class="btn btn-warning btn-sm" (click)="edit(contact)">
+        Edit
+      </button>
+    </li>
+  </ul>
+</div>
